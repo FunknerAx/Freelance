@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#574343"
+    android:padding="8dp">
+
+
+    <TextView
+        android:id="@+id/item_list_id"
+        style="@style/item_list_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ID заявки: 1292165412" />
+
+    <TextView
+        android:id="@+id/item_list_fio"
+        style="@style/item_list_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_list_id"
+        tools:text="ФИО: Функнер А.А." />
+
+    <TextView
+        android:id="@+id/item_list_address"
+        style="@style/item_list_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_list_fio"
+        tools:text="Адрес: Ул. Титова 21" />
+
+    <TextView
+        android:id="@+id/item_list_symptoms"
+        style="@style/item_list_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_list_address"
+        tools:text="Симптомы: Кашель" />
+    <TextView
+        android:id="@+id/item_list_category"
+        style="@style/item_list_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_list_symptoms"
+        tools:text="Срочность: 1 категория" />
+
+
+    <TextView
+        android:id="@+id/item_list_state"
+        style="@style/item_list_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_list_category"
+        tools:text="Статус: В обработке" />
+
+
+    <Button
+        android:id="@+id/button_complete_ILL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#391616"
+        android:text="Выполнить"
+        android:textColor="#F5F5F5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="updateCallStatus"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

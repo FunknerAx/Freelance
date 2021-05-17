@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="80dp"
+    android:paddingRight="16dp"
+    tools:context=".ui.register.RegisterActivity">
+
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Регистрация пациента"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/surname_editText"
+        app:layout_constraintLeft_toLeftOf="@id/surname_editText" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/surname_editText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Фамилия"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@id/name_editText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Пол"
+        app:layout_constraintBottom_toTopOf="@id/sex_radioGroup"
+        app:layout_constraintLeft_toLeftOf="@id/sex_radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/sex_radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toRightOf="@id/surname_editText"
+        app:layout_constraintTop_toBottomOf="@id/mainText">
+
+
+        <RadioButton
+            android:id="@+id/sexMale_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="муж." />
+
+        <RadioButton
+            android:id="@+id/sexFemale_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="жен." />
+    </RadioGroup>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/name_editText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Имя"
+        android:inputType="text"
+        app:layout_constraintLeft_toLeftOf="@id/surname_editText"
+        app:layout_constraintRight_toRightOf="@id/surname_editText"
+        app:layout_constraintTop_toBottomOf="@id/surname_editText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Дата рождения"
+        app:layout_constraintBottom_toTopOf="@id/birthDate_editText"
+        app:layout_constraintLeft_toLeftOf="@id/birthDate_editText" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/birthDate_editText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:inputType="date"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/weight_editText"
+        app:layout_constraintStart_toStartOf="@id/sex_radioGroup"
+        app:layout_constraintTop_toBottomOf="@id/sex_radioGroup" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/weight_editText"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:hint="Вес"
+        android:inputType="number"
+        android:textSize="15sp"
+        app:layout_constraintRight_toRightOf="@id/sex_radioGroup"
+        app:layout_constraintStart_toEndOf="@id/birthDate_editText"
+        app:layout_constraintTop_toBottomOf="@id/sex_radioGroup" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/patronymic_editText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Отчество"
+        android:inputType="text"
+        app:layout_constraintLeft_toLeftOf="@id/name_editText"
+        app:layout_constraintRight_toRightOf="@id/name_editText"
+        app:layout_constraintTop_toBottomOf="@id/name_editText" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/invalid_editText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Инвалидность"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@id/patronymic_editText"
+        app:layout_constraintLeft_toRightOf="@id/patronymic_editText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/birthDate_editText" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/email_editText"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="e-mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintLeft_toLeftOf="@id/patronymic_editText"
+        app:layout_constraintTop_toBottomOf="@id/patronymic_editText" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/password_editText"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="password"
+        android:inputType="textPassword"
+        app:layout_constraintLeft_toLeftOf="@id/patronymic_editText"
+        app:layout_constraintTop_toBottomOf="@id/email_editText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/register_button_RA"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Регистрация"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_editText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ambulance_register_button_RA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="регистрация скорой"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_editText" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_RA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/register_button_RA"
+        app:layout_constraintEnd_toStartOf="@id/register_button_RA" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

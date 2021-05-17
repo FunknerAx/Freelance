@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="1dp"
+    tools:context=".ui.mainPage.MainPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_view_MP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrey"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/items_listView_MP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/mainPage"
+        app:layout_constraintTop_toTopOf="@id/mainPage"
+        app:layout_constraintVertical_weight="2">
+
+        <TextView
+            android:id="@+id/mainText_MP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Карта пользователя"
+            android:textAlignment="center"
+            android:typeface="monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/common_google_signin_btn_text_dark_focused"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainText_MP" />
+
+        <TextView
+            android:id="@+id/displayName_textView_MP"
+            style="@style/MainPage_TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/sex_textView_MP"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topView"
+            tools:text="Имя Пациента" />
+
+        <TextView
+            android:id="@+id/sex_textView_MP"
+            style="@style/MainPage_TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/weight_textView_MP"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/displayName_textView_MP"
+            tools:text="Имя Пациента" />
+
+        <TextView
+            android:id="@+id/weight_textView_MP"
+            style="@style/MainPage_TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sex_textView_MP"
+            tools:text="Fcl" />
+
+        <TextView
+            android:id="@+id/invalid_textView_MP"
+            style="@style/MainPage_TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/weight_textView_MP"
+            tools:text="asdadasdasd" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ListView
+        android:id="@+id/items_listView_MP"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:dividerHeight="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/new_call_button_MP"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_view_MP"
+        app:layout_constraintVertical_weight="7" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/new_call_button_MP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="Вызов"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/items_listView_MP"
+        app:layout_constraintVertical_weight="1" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_MP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardview_dark_background"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

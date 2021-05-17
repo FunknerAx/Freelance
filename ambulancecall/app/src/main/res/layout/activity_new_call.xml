@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.newCall.NewCall">
+
+
+    <TextView
+        android:id="@+id/main_text_NC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Карточка вызова"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/call_address_editText_NC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/main_text_NC"
+        app:layout_constraintTop_toBottomOf="@id/main_text_NC"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:text="Улица" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_address_register_NC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="выбрать"
+        app:layout_constraintEnd_toEndOf="@id/call_address_editText_NC"
+        app:layout_constraintTop_toTopOf="@id/call_address_editText_NC" />
+
+
+    <SearchView
+        android:id="@+id/search_symptom_NC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:iconifiedByDefault="false"
+        android:inputType="text"
+        android:queryHint="Симптомы"
+        app:layout_constraintStart_toStartOf="@id/call_address_editText_NC"
+        app:layout_constraintTop_toBottomOf="@id/call_address_editText_NC" />
+
+    <ListView
+        android:id="@+id/symptoms_search_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#AFAFAF"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/search_symptom_NC"
+        app:layout_constraintTop_toBottomOf="@id/search_symptom_NC" />
+
+    <ListView
+        android:id="@+id/symptoms_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:dividerHeight="5sp"
+        app:layout_constraintStart_toStartOf="@id/search_symptom_NC"
+        app:layout_constraintTop_toBottomOf="@id/search_symptom_NC" />
+
+    <Button
+        android:id="@+id/init_call_button_NC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вызвать"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

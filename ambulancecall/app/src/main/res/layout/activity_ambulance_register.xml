@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="80dp"
+    android:paddingRight="16dp"
+    tools:context=".ui.register.RegisterActivity">
+
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Регистрация Скорой"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ambulance_name_editText_RA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Наиманование"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@id/ambulance_address_editText_RA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainText" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_address_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="выбрать"
+        app:layout_constraintBottom_toTopOf="@id/ambulance_email_editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ambulance_name_editText_RA" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ambulance_address_editText_RA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:enabled="false"
+        android:maxEms="15"
+        app:layout_constraintBottom_toTopOf="@+id/ambulance_email_editText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ambulance_name_editText_RA"
+        tools:hint="Адрес скорой помощи" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ambulance_email_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="e-mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintLeft_toLeftOf="@+id/ambulance_address_editText_RA"
+        app:layout_constraintTop_toBottomOf="@+id/ambulance_address_editText_RA" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ambulance_password_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="password"
+        android:inputType="textPassword"
+        app:layout_constraintLeft_toLeftOf="@+id/ambulance_email_editText"
+        app:layout_constraintTop_toBottomOf="@+id/ambulance_email_editText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ambulance_register_button_RA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Регистрация"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/client_registerChange_button_RA"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="регистрация пациента"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/ambulance_progressBar_RA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ambulance_register_button_RA"
+        app:layout_constraintEnd_toStartOf="@id/ambulance_register_button_RA" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

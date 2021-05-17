@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "308481926675",
+    "project_id": "ambulancecall-18638",
+    "storage_bucket": "ambulancecall-18638.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308481926675:android:8def0aba8b3d3a051b41e6",
+        "android_client_info": {
+          "package_name": "kz.ilyas.ambulancecall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308481926675-ctt54b4h67480u5mtk3or9l95805ee36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAirOrBL2rWfnCYv9oMj5bPKAg_epdVf6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308481926675-ctt54b4h67480u5mtk3or9l95805ee36.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
