@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "780514735701",
+    "project_id": "gasindicator-d6ac9",
+    "storage_bucket": "gasindicator-d6ac9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780514735701:android:ab418fa42f197d2a5306dc",
+        "android_client_info": {
+          "package_name": "kz.ilyas.gasindicator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780514735701-v6tvuikonh42unjsvsuh808knu7es7jm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkGWQ23lvgelXBksB4N068ACpf7MK7j0Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780514735701-v6tvuikonh42unjsvsuh808knu7es7jm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
