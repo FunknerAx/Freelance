@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lightGrey"
+    android:padding="8dp"
+    tools:context=".ui.mainPage.GasIndicatorItem"
+    android:layout_marginBottom="10sp">
+
+    <TextView
+        android:id="@+id/gasItem_id_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gasItem_Id_title"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gasItem_id_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintStart_toEndOf="@id/gasItem_id_title"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="123456789" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/gasItem_address_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gasItem_address_title"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gasItem_id_title" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/gasItem_address_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintStart_toEndOf="@id/gasItem_address_title"
+        app:layout_constraintTop_toBottomOf="@id/gasItem_id_value"
+        tools:text="123456789" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/gasItem_position_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gasItem_position_title"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gasItem_address_title" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/gasItem_position_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintStart_toEndOf="@id/gasItem_position_title"
+        app:layout_constraintTop_toBottomOf="@id/gasItem_address_value"
+        tools:text="123456789" />
+
+    <Button
+        android:id="@+id/gasIndicator_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="3.4"
+        android:padding="10dp"
+        android:textColor="@color/yellow"
+        android:backgroundTint="@color/darkGrey"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="16dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

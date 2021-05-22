@@ -1,7 +1,8 @@
-package kz.ilyas.gasindicator.ui.login;
+package kz.ilyas.gasindicator.ui.register;
 
 import android.util.Patterns;
 
+import androidx.annotation.Nullable;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -9,11 +10,9 @@ import androidx.lifecycle.ViewModel;
 import com.google.firebase.auth.FirebaseAuth;
 
 import kz.ilyas.gasindicator.data.DataBaseSource;
+import kz.ilyas.gasindicator.data.model.Client;
 
-public class LoginViewModel extends ViewModel {
-    private static final String EMAIL_PATTERN =
-            "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" +
-                    "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+public class RegisterViewModel extends ViewModel {
 
     private DataBaseSource db = new DataBaseSource(this);
 
@@ -28,7 +27,7 @@ public class LoginViewModel extends ViewModel {
         return exceptionMutableLiveData;
     }
 
-    public String checkLoginData(String email, String password) {
+    public String checkInputData(String email, String password) {
         StringBuilder result = new StringBuilder();
 
         if (Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
@@ -37,7 +36,7 @@ public class LoginViewModel extends ViewModel {
             result.append(1);
         }
 
-        if (!password.equals("")) {
+        if (password.length() > 6) {
             result.append(0);
         } else {
             result.append(1);
@@ -46,13 +45,12 @@ public class LoginViewModel extends ViewModel {
         return result.toString();
     }
 
-    public void authenticate(String email, String password) {
-        db.signIn(email, password);
-
+    public void registerNewClient(Client client) {
+        db.addNewUser(client);
     }
 
     public void sendResult(FirebaseAuth mAuth, Exception exception) {
-        if(exception!= null){
+        if (exception != null) {
             exceptionMutableLiveData.setValue(exception);
         } else {
             firebaseAuthMutableLiveData.setValue(mAuth);

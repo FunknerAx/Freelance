@@ -5,4 +5,13 @@
     <string name="login_password">password</string>
     <string name="login_sign_in_button">вход</string>
     <string name="login_register_button">Регистрация</string>
+    <string name="register_namePage">Регистрация пользователя</string>
+    <string name="register_email">email</string>
+    <string name="register_password">password</string>
+    <string name="register_register_button">регистрация</string>
+    <string name="register_clientName">Имя пользователя</string>
+    <string name="mainPage_fab_icon">Добавить</string>
+    <string name="gasItem_Id_title">ID:</string>
+    <string name="gasItem_address_title">Адрес:</string>
+    <string name="gasItem_position_title">Положение:</string>
 </resources>
