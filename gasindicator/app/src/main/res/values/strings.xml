@@ -14,4 +14,16 @@
     <string name="gasItem_Id_title">ID:</string>
     <string name="gasItem_address_title">Адрес:</string>
     <string name="gasItem_position_title">Положение:</string>
+    <string name="register_indicator_new_indicator">New Indicator</string>
+    <string name="register_indicator_id">ID устройства</string>
+    <string name="register_indicator_address">Адрес</string>
+    <string name="register_indicator_position">Местоположение</string>
+    <string name="register_indicator_password">Пароль</string>
+    <string name="register_indicator_critical_value">Уровень оповещение</string>
+    <string name="register_indicator_new_button">регистрация</string>
+    <string name="register_indicator_exists_button">добавить</string>
+    <string name="register_indicator_exists_label">Добавить существующий</string>
+    <string name="register_indicator_new_label">Регистрация нового устройства</string>
+    <string name="static_of_indicator_toolBar_Label">Static of indicator</string>
+    <string name="staticIndicator_show_button">показать</string>
 </resources>

@@ -1,21 +1,42 @@
 package kz.ilyas.gasindicator.data.model;
 
-public class Indicator {
+import java.io.Serializable;
+import java.util.HashMap;
+
+public class Indicator implements Serializable {
     private String id;
     private String address;
     private String position;
     private String currentValue;
     private String criticalValue;
+    private String password;
 
-    public Indicator(String id, String address, String position, String currentValue, String criticalValue) {
+    public Indicator(String id, String address, String position, String currentValue, String criticalValue, String password) {
         this.id = id;
         this.address = address;
         this.position = position;
         this.currentValue = currentValue;
         this.criticalValue = criticalValue;
+        this.password = password;
+    }
+
+    public Indicator(HashMap<String, String> object) {
+        this.id = object.get("id");
+        this.address = object.get("address");
+        this.position = object.get("position");
+        this.currentValue = object.get("currentValue");
+        this.criticalValue = object.get("criticalValue");
     }
 
     public Indicator() {
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getId() {

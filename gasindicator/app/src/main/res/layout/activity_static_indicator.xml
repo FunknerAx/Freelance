@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mainPage.indicator.StaticIndicator">
+
+    <Toolbar
+        android:id="@+id/staticIndicator_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/static_of_indicator_toolBar_Label"
+            android:textColor="@color/darkGrey"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </Toolbar>
+
+    <TextView
+        android:id="@+id/staticIndicator_id_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/gasItem_Id_title"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/staticIndicator_toolBar" />
+
+    <TextView
+        android:id="@+id/staticIndicator_id_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintStart_toEndOf="@id/staticIndicator_id_title"
+        app:layout_constraintTop_toTopOf="@id/staticIndicator_id_title"
+        tools:text="123456789" />
+
+    <TextView
+        android:id="@+id/staticIndicator_address_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/gasItem_address_title"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/staticIndicator_id_title" />
+
+    <TextView
+        android:id="@+id/staticIndicator_address_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintStart_toEndOf="@id/staticIndicator_address_title"
+        app:layout_constraintTop_toTopOf="@id/staticIndicator_address_title"
+        tools:text="Ул. Жумканова" />
+
+    <TextView
+        android:id="@+id/staticIndicator_position_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/gasItem_position_title"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/staticIndicator_address_value" />
+
+    <TextView
+        android:id="@+id/staticIndicator_position_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintStart_toEndOf="@id/staticIndicator_position_title"
+        app:layout_constraintTop_toTopOf="@id/staticIndicator_position_title"
+        tools:text="Кухня 2" />
+
+    <TextView
+        android:id="@+id/staticIndicator_dateStart_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintStart_toStartOf="@id/staticIndicator_position_title"
+        app:layout_constraintTop_toBottomOf="@id/staticIndicator_position_title"
+        android:text="С" />
+
+    <EditText
+        android:id="@+id/staticIndicator_dateStart_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@id/staticIndicator_dateStart_label"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@id/staticIndicator_dateStart_label"
+        app:layout_constraintTop_toTopOf="@id/staticIndicator_dateStart_label" />
+
+    <TextView
+        android:id="@+id/staticIndicator_dateEnd_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintStart_toEndOf="@id/staticIndicator_dateStart_value"
+        app:layout_constraintTop_toBottomOf="@id/staticIndicator_position_title"
+        android:text="По" />
+
+    <EditText
+        android:id="@+id/staticIndicator_dateEnd_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@id/staticIndicator_dateEnd_label"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@id/staticIndicator_dateEnd_label"
+        app:layout_constraintTop_toTopOf="@id/staticIndicator_dateEnd_label" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/staticIndicator_show_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/staticIndicator_show_button"
+        android:textColor="@color/yellow"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/staticIndicator_dateEnd_value"
+        app:layout_constraintTop_toTopOf="@id/staticIndicator_dateEnd_value" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/staticIndicator_graphView"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/staticIndicator_dateStart_label"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

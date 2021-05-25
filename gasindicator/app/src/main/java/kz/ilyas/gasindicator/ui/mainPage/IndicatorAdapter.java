@@ -40,8 +40,6 @@ public class IndicatorAdapter extends RecyclerView.Adapter<IndicatorAdapter.View
         holder.id.setText(indicator.getId());
         holder.address.setText(indicator.getAddress());
         holder.position.setText(indicator.getPosition());
-        holder.showStat.setText(indicator.getCurrentValue());
-
     }
 
     @Override

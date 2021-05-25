@@ -6,4 +6,151 @@
     android:layout_height="match_parent"
     tools:context=".ui.mainPage.indicator.RegisterIndicator">
 
+    <Toolbar
+        android:id="@+id/registerIndicator_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_indicator_new_indicator"
+            android:textColor="@color/darkGrey"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </Toolbar>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/registerIndicator_newLabel_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/register_indicator_new_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/registerIndicator_idIndicator_editText"
+        app:layout_constraintTop_toBottomOf="@id/registerIndicator_toolBar" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/registerIndicator_idIndicator_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="14"
+        android:hint="@string/register_indicator_id"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerIndicator_newLabel_text_view" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/registerIndicator_addressIndicator_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="14"
+        android:hint="@string/register_indicator_address"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerIndicator_idIndicator_editText" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/registerIndicator_positionIndicator_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="14"
+        android:hint="@string/register_indicator_position"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerIndicator_addressIndicator_editText" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/registerIndicator_passwordIndicator_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="14"
+        android:hint="@string/register_indicator_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerIndicator_positionIndicator_editText" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/registerIndicator_criticalValueIndicator_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="14"
+        android:hint="@string/register_indicator_critical_value"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerIndicator_passwordIndicator_editText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerIndicator_register_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/register_indicator_new_button"
+        app:layout_constraintEnd_toEndOf="@id/registerIndicator_criticalValueIndicator_editText"
+        app:layout_constraintTop_toBottomOf="@id/registerIndicator_criticalValueIndicator_editText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/registerIndicator_existsLabel_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/register_indicator_exists_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/registerIndicator_idExistsIndicator_editText"
+        app:layout_constraintTop_toBottomOf="@id/registerIndicator_register_button" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/registerIndicator_idExistsIndicator_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="14"
+        android:hint="@string/register_indicator_id"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerIndicator_existsLabel_text_view" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/registerIndicator_passwordExistsIndicator_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="14"
+        android:hint="@string/register_indicator_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerIndicator_idExistsIndicator_editText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerIndicator_addExist_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_indicator_exists_button"
+        android:textColor="@color/yellow"
+        app:layout_constraintEnd_toEndOf="@id/registerIndicator_passwordExistsIndicator_editText"
+        app:layout_constraintTop_toBottomOf="@id/registerIndicator_passwordExistsIndicator_editText" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

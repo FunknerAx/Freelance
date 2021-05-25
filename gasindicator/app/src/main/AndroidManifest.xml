@@ -9,9 +9,12 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.GasIndicator">
-        <activity android:name=".ui.mainPage.indicator.RegisterIndicator"></activity>
         <activity
-            android:name=".ui.mainPage.GasIndicatorItem"
+            android:name=".ui.mainPage.indicator.StaticIndicator"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name=".ui.mainPage.indicator.RegisterIndicator"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialComponents.NoActionBar" />
         <activity
