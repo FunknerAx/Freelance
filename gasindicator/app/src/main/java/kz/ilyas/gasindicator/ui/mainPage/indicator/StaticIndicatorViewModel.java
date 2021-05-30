@@ -60,25 +60,31 @@ public class StaticIndicatorViewModel extends ViewModel {
         ArrayList<Statistics> newSortedArray = new ArrayList<>();
         newSortedArray.addAll(sortedArray);
 
-        for (int curIndex = 0; curIndex < 1; curIndex++) {
+        for (int curIndex = 0; curIndex < newSortedArray.size(); curIndex++) {
 
             //Log.v("COUNT", sortedArray.get(curIndex).getStatics().size() + "");
             for (int i = 0; i < newSortedArray.get(curIndex).getStatics().size(); i++) {
                 int hh = Integer.valueOf(newSortedArray.get(curIndex).getStatics().get(i).getTime().substring(0, 2));
                 int mm = Integer.valueOf(newSortedArray.get(curIndex).getStatics().get(i).getTime().substring(3, 5));
                 int ss = Integer.valueOf(newSortedArray.get(curIndex).getStatics().get(i).getTime().substring(6, 8));
-                Date date1 = new Date(1997, 10, 20, hh, mm, ss);
+                Date min = new Date(1997, 10, 20, hh, mm, ss);
+                int minId = i;
 
                 for (int j = i+1;j<newSortedArray.get(curIndex).getStatics().size(); j++) {
                     int hh2 = Integer.valueOf(newSortedArray.get(curIndex).getStatics().get(j).getTime().substring(0, 2));
                     int mm2 = Integer.valueOf(newSortedArray.get(curIndex).getStatics().get(j).getTime().substring(3, 5));
                     int ss2 = Integer.valueOf(newSortedArray.get(curIndex).getStatics().get(j).getTime().substring(6, 8));
-                    Date date2 = new Date(1997, 10, 20, hh2, mm2, ss2);
-                    if (date1.after(date2)) {
+                    Date cur = new Date(1997, 10, 20, hh2, mm2, ss2);
+                    if (min.after(cur)) {
+                        min = cur;
+                        minId = j;
                        // Log.v("CONTSWAP", j + " " + i + " " + curIndex);
-                        swapTime(newSortedArray, curIndex, i, j);
+//                        swapTime(newSortedArray, curIndex, i, j);
                     }
                 }
+                Statistic tmp = newSortedArray.get(curIndex).getStatics().get(i);
+                newSortedArray.get(curIndex).getStatics().set(i, newSortedArray.get(curIndex).getStatics().get(minId));
+                newSortedArray.get(curIndex).getStatics().set(minId, tmp);
             }
         }
         return newSortedArray;

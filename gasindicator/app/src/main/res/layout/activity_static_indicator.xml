@@ -96,62 +96,66 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:text="Дата:"
         android:textColor="@color/darkGrey"
         app:layout_constraintStart_toStartOf="@id/staticIndicator_position_title"
-        app:layout_constraintTop_toBottomOf="@id/staticIndicator_position_title"
-        android:text="С" />
+        app:layout_constraintTop_toBottomOf="@id/staticIndicator_position_title" />
 
-    <EditText
+    <TextView
         android:id="@+id/staticIndicator_dateStart_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="5"
-        android:inputType="date"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/darkGrey"
+        android:visibility="gone"
+        android:hint="выбрать"
         app:layout_constraintBottom_toBottomOf="@id/staticIndicator_dateStart_label"
-        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toEndOf="@id/staticIndicator_dateStart_label"
         app:layout_constraintTop_toTopOf="@id/staticIndicator_dateStart_label" />
 
-    <TextView
-        android:id="@+id/staticIndicator_dateEnd_label"
-        android:layout_width="wrap_content"
+    <ProgressBar
+        android:id="@+id/staticIndicator_progressBar"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/darkGrey"
-        app:layout_constraintStart_toEndOf="@id/staticIndicator_dateStart_value"
-        app:layout_constraintTop_toBottomOf="@id/staticIndicator_position_title"
-        android:text="По" />
+        android:layout_marginStart="10dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/staticIndicator_dateStart_label"
+        app:layout_constraintStart_toEndOf="@id/staticIndicator_dateStart_label"
+        app:layout_constraintTop_toTopOf="@id/staticIndicator_dateStart_label"/>
 
-    <EditText
-        android:id="@+id/staticIndicator_dateEnd_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="5"
-        android:inputType="date"
-        app:layout_constraintBottom_toBottomOf="@id/staticIndicator_dateEnd_label"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toEndOf="@id/staticIndicator_dateEnd_label"
-        app:layout_constraintTop_toTopOf="@id/staticIndicator_dateEnd_label" />
+    <ListView
+        android:id="@+id/staticIndicator_recyclerDataView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:visibility="gone"
+        android:background="@color/lightGrey"
+        android:dividerHeight="5dp"
+        app:layout_constraintBottom_toTopOf="@id/staticIndicator_graphView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/staticIndicator_dateStart_value"
+        app:layout_constraintTop_toTopOf="@id/staticIndicator_dateStart_value" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/staticIndicator_show_button"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:text="@string/staticIndicator_show_button"
         android:textColor="@color/yellow"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/staticIndicator_dateEnd_value"
-        app:layout_constraintTop_toTopOf="@id/staticIndicator_dateEnd_value" />
+        app:layout_constraintStart_toStartOf="@id/staticIndicator_dateStart_label"
+        app:layout_constraintTop_toBottomOf="@id/staticIndicator_dateStart_label" />
 
     <com.jjoe64.graphview.GraphView
         android:id="@+id/staticIndicator_graphView"
         android:layout_width="350dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/staticIndicator_dateStart_label"/>
+        app:layout_constraintTop_toBottomOf="@id/staticIndicator_show_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

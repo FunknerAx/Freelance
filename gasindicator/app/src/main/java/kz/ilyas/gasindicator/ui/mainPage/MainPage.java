@@ -42,6 +42,7 @@ public class MainPage extends AppCompatActivity {
         }
 
         add = (Button) findViewById(R.id.mainPage_fab);
+
         RecyclerView recyclerView = findViewById(R.id.mainPage_recyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(MainPage.this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
@@ -83,7 +84,6 @@ public class MainPage extends AppCompatActivity {
     public void getIndicatorStatic(View view) {
         ConstraintLayout parent = (ConstraintLayout) view.getParent();
         TextView id = parent.findViewById(R.id.gasItem_id_value);
-        Toast.makeText(MainPage.this, id.getText().toString(), Toast.LENGTH_SHORT).show();
         Indicator indicator = null;
         for (Indicator cur : indicators) {
             if(cur.getId().equals(id.getText().toString()))
